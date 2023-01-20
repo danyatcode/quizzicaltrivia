@@ -29,6 +29,9 @@ function Questions(){
    React.useEffect(() => {
     console.log(data)
     if(data !== undefined){
+        setallQuestionsBlanks(allNewBlanks());
+        setIsFilled(prevIsFilled => {return {...prevIsFilled, isFilled: false, value : 0}});
+        setIsShownClicked(false);
 
         setQuestionArray(data.results.map( element => {
         return {
