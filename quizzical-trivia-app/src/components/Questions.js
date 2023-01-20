@@ -105,7 +105,7 @@ function Questions(){
 
       }
 
-      if(allQuestionsBlanks !== undefined && allQuestionsBlanks.length > 0){
+      if(allQuestionsBlanks !== undefined && allQuestionsBlanks.length > 1){
 
         console.log(allQuestionsBlanks)
        
