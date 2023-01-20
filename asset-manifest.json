@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/danyatcode/quizzicaltrivia/tree/main/quizzical-trivia-app/static/css/main.a3100a9c.css",
-    "main.js": "/danyatcode/quizzicaltrivia/tree/main/quizzical-trivia-app/static/js/main.12920e37.js",
-    "index.html": "/danyatcode/quizzicaltrivia/tree/main/quizzical-trivia-app/index.html",
-    "main.a3100a9c.css.map": "/danyatcode/quizzicaltrivia/tree/main/quizzical-trivia-app/static/css/main.a3100a9c.css.map",
-    "main.12920e37.js.map": "/danyatcode/quizzicaltrivia/tree/main/quizzical-trivia-app/static/js/main.12920e37.js.map"
+    "main.css": "/quizzicaltrivia/static/css/main.a3100a9c.css",
+    "main.js": "/quizzicaltrivia/static/js/main.12920e37.js",
+    "index.html": "/quizzicaltrivia/index.html",
+    "main.a3100a9c.css.map": "/quizzicaltrivia/static/css/main.a3100a9c.css.map",
+    "main.12920e37.js.map": "/quizzicaltrivia/static/js/main.12920e37.js.map"
   },
   "entrypoints": [
     "static/css/main.a3100a9c.css",
