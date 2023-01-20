@@ -29,10 +29,6 @@ function Questions(){
    React.useEffect(() => {
     console.log(data)
     if(data !== undefined){
-        setallQuestionsBlanks(allNewBlanks());
-        setIsFilled(prevIsFilled => {return {...prevIsFilled, isFilled: false, value : 0}});
-        setIsShownClicked(false);
-
         setQuestionArray(data.results.map( element => {
         return {
             question : element.question,
@@ -112,6 +108,10 @@ function Questions(){
       }
 
       if(allQuestionsBlanks !== undefined){
+
+        setallQuestionsBlanks(allNewBlanks());
+        setIsFilled(prevIsFilled => {return {...prevIsFilled, isFilled: false, value : 0}});
+        setIsShownClicked(false);
 
         function chooseAnswer(id, index){
 
@@ -230,6 +230,7 @@ function Questions(){
         }
         
        }
+       
        function playAgain(){
             setallQuestionsBlanks(allNewBlanks());
             setIsFilled(prevIsFilled => {return {...prevIsFilled, isFilled: false, value : 0}});
