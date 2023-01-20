@@ -1,5 +1,4 @@
 function Ready(props){
-    console.log(props)
     return(
         <div className="ready-content">
             <h1 className="ready-title">Quizzical</h1>
