@@ -24,11 +24,10 @@ function Questions(){
         fetch('https://opentdb.com/api.php?amount=7&category=25')
         .then(res => res.json())
         .then(data => setData(data))
-        .then(error => console.error(error))
         }, [])
     
    React.useEffect(() => {
-
+    console.log(data)
     if(data !== undefined){
 
         setQuestionArray(data.results.map( element => {
@@ -109,7 +108,7 @@ function Questions(){
 
       }
 
-      if(allQuestionsBlanks !== undefined && allQuestionsBlanks.length > 1){
+      if(allQuestionsBlanks !== undefined){
 
         function chooseAnswer(id, index){
 
