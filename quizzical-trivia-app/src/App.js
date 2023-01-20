@@ -17,7 +17,7 @@ function App() {
     <div className="App">
       <main>
         {!ready && <Ready onClick={() => getReady()}/>}
-         <Questions />
+        {ready && <Questions />}
         <img className='blop-blue' src={blops} alt="#"/>
         <img className='blop-yellow' src={blopcream} alt="#"/>
       </main>
