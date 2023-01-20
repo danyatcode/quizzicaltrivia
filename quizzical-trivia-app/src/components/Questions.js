@@ -21,13 +21,11 @@ function Questions(){
     const [filled, setIsFilled] = React.useState({isFilled : false, value : 0})
 
     React.useEffect(() => {
-        async function getQuestions(){
-            const res = await fetch('https://opentdb.com/api.php?amount=7&category=25')
-            const data = await res.json()
-            return setData(data)
-        }
-        getQuestions();
-    }, [])
+        fetch('https://opentdb.com/api.php?amount=7&category=25')
+        .then(res => res.json())
+        .then(data => setData(data))
+        .then(error => console.error(error))
+        }, [])
     
    React.useEffect(() => {
 
