@@ -6,9 +6,6 @@ import Answer from './AnswerButton'
 function Questions(){
 
     const [questionArray, setQuestionArray] = React.useState({
-        question : '',
-        correct_answer : '',
-        incorrect_answers : '',
     })
 
     const [data, setData] = React.useState();
@@ -60,6 +57,7 @@ function Questions(){
                    }
                 }),
                 question: value.question,
+                
            }
         }
         if(value.incorrect_answers.includes('True')){
@@ -107,11 +105,10 @@ function Questions(){
 
       }
 
-      if(allQuestionsBlanks !== undefined){
+      if(allQuestionsBlanks !== undefined && allQuestionsBlanks.length > 0){
 
-        setallQuestionsBlanks(allNewBlanks());
-        setIsFilled(prevIsFilled => {return {...prevIsFilled, isFilled: false, value : 0}});
-        setIsShownClicked(false);
+        console.log(allQuestionsBlanks)
+       
 
         function chooseAnswer(id, index){
 
@@ -230,7 +227,7 @@ function Questions(){
         }
         
        }
-       
+
        function playAgain(){
             setallQuestionsBlanks(allNewBlanks());
             setIsFilled(prevIsFilled => {return {...prevIsFilled, isFilled: false, value : 0}});
