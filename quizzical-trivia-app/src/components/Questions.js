@@ -10,6 +10,7 @@ function Questions(){
 
     const [data, setData] = React.useState();
 
+    const [isDataFullyLoaded, setDataFullyLoaded] = React.useState(false)
 
     const [isChosen, setIsChosen] = React.useState(false);
 
@@ -24,7 +25,6 @@ function Questions(){
         }, [])
     
    React.useEffect(() => {
-    console.log(data)
     if(data !== undefined){
         setQuestionArray(data.results.map( element => {
         return {
@@ -39,6 +39,16 @@ function Questions(){
    }}, [data])
 
     const [allQuestionsBlanks, setallQuestionsBlanks] = React.useState();
+
+   React.useEffect(() => {
+    console.log(allQuestionsBlanks);
+    if(allQuestionsBlanks !== undefined && allQuestionsBlanks.length === questionArray.length){
+        setDataFullyLoaded(true)
+    }
+    else{
+        setDataFullyLoaded(false)
+    }
+   }, [allQuestionsBlanks])
 
     function generateNewBlank(value){
         
@@ -105,10 +115,7 @@ function Questions(){
 
       }
 
-      if(allQuestionsBlanks !== undefined && allQuestionsBlanks.length > 1){
-
-        console.log(allQuestionsBlanks)
-       
+      if(isDataFullyLoaded){
 
         function chooseAnswer(id, index){
 
